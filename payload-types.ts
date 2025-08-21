@@ -135,7 +135,7 @@ export interface Category {
 export interface Post {
   id: string;
   title: string;
-  heroImage?: (string | null) | Media;
+  heroImage: string | Media;
   slug: string;
   status: 'draft' | 'published' | 'archived';
   publishedAt?: string | null;

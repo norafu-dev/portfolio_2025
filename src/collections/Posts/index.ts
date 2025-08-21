@@ -23,6 +23,7 @@ export const Posts: CollectionConfig = {
       name: "heroImage",
       type: "upload",
       relationTo: "media",
+      required: true,
     },
     {
       name: "slug",
