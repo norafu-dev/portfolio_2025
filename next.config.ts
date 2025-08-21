@@ -8,18 +8,17 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "*.public.blob.vercel-storage.com",
-        pathname: "/**",
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+        pathname: "/api/media/file/**",
       },
       {
         protocol: "https",
-        hostname: "blob.vercel-storage.com",
-        pathname: "/**",
+        hostname: process.env.SERVER_URL!,
+        pathname: "/api/media/file/**",
       },
     ],
-    // 添加本地域名支持
-    domains: ["localhost"],
   },
 };
 

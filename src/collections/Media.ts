@@ -4,18 +4,15 @@ export const Media: CollectionConfig = {
   slug: "media",
   admin: {
     defaultColumns: ["filename", "alt", "createdAt"],
-    useAsTitle: "alt",
+    useAsTitle: "filename",
+  },
+  access: {
+    read: () => true,
   },
   upload: {
-    staticDir: "public/media",
-    adminThumbnail: "thumbnail",
     mimeTypes: ["image/*"],
   },
   fields: [
-    {
-      name: "alt",
-      type: "text",
-    },
     {
       name: "createdAt",
       type: "date",
