@@ -11,7 +11,7 @@ import { Media } from "./collections/Media";
 export default buildConfig({
   serverURL:
     process.env.NODE_ENV === "production"
-      ? process.env.SERVER_URL
+      ? "https://" + process.env.SERVER_URL
       : "http://localhost:3000",
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
